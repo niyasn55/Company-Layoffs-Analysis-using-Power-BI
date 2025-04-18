@@ -40,8 +40,12 @@ Slicers: Year-wise interactive filter for dynamic views
 
 🧠 DAX Measures Used
 Total Layoffs = SUM('Table'[Total_Laid_Off])
-
-Selected Year = SELECTEDVALUE('Date'[Year])
+Average layoffs = AVERAGE('employee Layoffs'[Percentage_Laid_Off])
+total fund raised = SUM('employee Layoffs'[Funds_Raised] )
+Total Laid Off = SUM('employee Layoffs'[Total_Laid_Off])
+total no of company = COUNTROWS('employee Layoffs' )
+Year = YEAR(DATEVALUE('employee Layoffs'[Date]))
+Unique Industries = DISTINCTCOUNT('employee Layoffs'[Industry])
 
 🖥️ Requirements
 Microsoft Power BI Desktop
